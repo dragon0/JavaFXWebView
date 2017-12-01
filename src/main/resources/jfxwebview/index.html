@@ -1,0 +1,37 @@
+<head>
+<title>Hello</title>
+
+<script type="text/javascript">
+api = {
+  getGreeting: function() {return "hello from YavaScript";}
+};
+
+document.write(app.getGreeting());
+console.log("hello?");
+alert("hello???");
+
+function callJava() {
+  console.log("hi!");
+  app.sayHi("JavaScript");
+}
+</script>
+
+</head>
+<body>
+  <h1>Hello World</h1>
+  <button onclick="callJava()">Click</button>
+  <span id="area"></span>
+
+  <script type="text/javascript">
+area = document.getElementById("area");
+if(typeof(app) != 'undefined') {
+  area.innerHTML = "(app is not null) ";
+  area.innerHTML += "Java greeting: " + app.getGreeting();
+}
+else {
+  area.innerHTML = "app is null";
+}
+  </script>
+
+</body>
+
